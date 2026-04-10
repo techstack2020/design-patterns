@@ -1,0 +1,97 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="aW_nTypM6OSvuNDs-gDF">
+    <mxGraphModel dx="1303" dy="626" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0" adaptiveColors="auto">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=15;fontStyle=1;fillColor=none;strokeColor=none;fontColor=#1a1d27;align=center;" value="Observer Pattern — News Channel Example" vertex="1">
+          <mxGeometry height="30" width="860" x="120" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="client-label" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#2563eb;align=center;fillColor=none;strokeColor=none;" value="«Client»" vertex="1">
+          <mxGeometry height="16" width="190" x="38" y="59" as="geometry" />
+        </mxCell>
+        <mxCell id="client" parent="1" style="rounded=1;whiteSpace=wrap;arcSize=8;fillColor=#e8f4fd;strokeColor=#2563eb;fontColor=#1a1d27;fontFamily=JetBrains Mono,monospace;fontSize=11;align=left;spacingLeft=10;html=1;verticalAlign=top;" value="&lt;b&gt;ObserverPatternDemo&lt;/b&gt;&lt;hr/&gt;+ main(args: String[]): void" vertex="1">
+          <mxGeometry height="60" width="190" x="40" y="84" as="geometry" />
+        </mxCell>
+        <mxCell id="obs-iface-label" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#5b4fcf;align=center;fillColor=none;strokeColor=none;" value="«interface» Observer" vertex="1">
+          <mxGeometry height="16" width="230" x="760" y="59" as="geometry" />
+        </mxCell>
+        <mxCell id="obs-iface" parent="1" style="rounded=1;whiteSpace=wrap;arcSize=8;fillColor=#f3f0ff;strokeColor=#5b4fcf;fontColor=#1a1d27;fontFamily=JetBrains Mono,monospace;fontSize=11;align=left;spacingLeft=10;html=1;verticalAlign=top;" value="&lt;b&gt;&lt;i&gt;Observer&lt;/i&gt;&lt;/b&gt;&lt;hr/&gt;+ update(message: String): void" vertex="1">
+          <mxGeometry height="60" width="230" x="760" y="84" as="geometry" />
+        </mxCell>
+        <mxCell id="subj-iface-label" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#16a34a;align=center;fillColor=none;strokeColor=none;" value="«interface» Observable (Subject)" vertex="1">
+          <mxGeometry height="16" width="280" x="308" y="62" as="geometry" />
+        </mxCell>
+        <mxCell id="subj-iface" parent="1" style="rounded=1;whiteSpace=wrap;arcSize=8;fillColor=#edfaf1;strokeColor=#16a34a;fontColor=#1a1d27;fontFamily=JetBrains Mono,monospace;fontSize=11;align=left;spacingLeft=10;html=1;verticalAlign=top;" value="&lt;b&gt;&lt;i&gt;Observable&lt;/i&gt;&lt;/b&gt;&lt;hr/&gt;+ add(o: Observer): void&lt;br/&gt;+ remove(o: Observer): void&lt;br/&gt;+ notifyObservers(): void" vertex="1">
+          <mxGeometry height="84" width="280" x="310" y="84" as="geometry" />
+        </mxCell>
+        <mxCell id="news-obs-label" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#16a34a;align=center;fillColor=none;strokeColor=none;" value="«Concrete Observable»" vertex="1">
+          <mxGeometry height="16" width="320" x="225" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="news-obs" parent="1" style="rounded=1;whiteSpace=wrap;arcSize=8;fillColor=#edfaf1;strokeColor=#16a34a;fontColor=#1a1d27;fontFamily=JetBrains Mono,monospace;fontSize=11;align=left;spacingLeft=10;html=1;verticalAlign=top;" value="&lt;b&gt;NewsObservableImpl&lt;/b&gt;&lt;hr/&gt;- observers: List&amp;lt;Observer&amp;gt;&lt;br/&gt;- news: String&lt;br/&gt;&lt;hr/&gt;+ setNews(news: String): void&lt;br/&gt;+ add(o: Observer): void&lt;br/&gt;+ remove(o: Observer): void&lt;br/&gt;+ notifyObservers(): void" vertex="1">
+          <mxGeometry height="120" width="320" x="290" y="284" as="geometry" />
+        </mxCell>
+        <mxCell id="ch1-label" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#5b4fcf;align=center;fillColor=none;strokeColor=none;" value="«Concrete Observer»" vertex="1">
+          <mxGeometry height="16" width="220" x="660" y="268" as="geometry" />
+        </mxCell>
+        <mxCell id="ch1" parent="1" style="rounded=1;whiteSpace=wrap;arcSize=8;fillColor=#f3f0ff;strokeColor=#5b4fcf;fontColor=#1a1d27;fontFamily=JetBrains Mono,monospace;fontSize=11;align=left;spacingLeft=10;html=1;verticalAlign=top;" value="&lt;b&gt;NewsChannelObserver&lt;/b&gt;&lt;hr/&gt;- name: String&lt;br/&gt;&lt;hr/&gt;+ NewsChannelObserver(name: String)&lt;br/&gt;+ update(message: String): void" vertex="1">
+          <mxGeometry height="100" width="240" x="707" y="294" as="geometry" />
+        </mxCell>
+        <mxCell id="inst-label" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#5b4fcf;align=center;fillColor=none;strokeColor=none;" value="«instances at runtime»" vertex="1">
+          <mxGeometry height="16" width="240" x="634" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="inst" parent="1" style="rounded=1;whiteSpace=wrap;arcSize=8;fillColor=#f9f6ff;strokeColor=#5b4fcf;fontColor=#1a1d27;fontFamily=JetBrains Mono,monospace;fontSize=11;align=left;spacingLeft=10;html=1;verticalAlign=top;dashed=1;" value="&lt;b&gt;channel1&lt;/b&gt; : NewsChannelObserver&lt;br/&gt;name = &amp;quot;Channel One&amp;quot;&lt;br/&gt;&lt;br/&gt;&lt;b&gt;channel2&lt;/b&gt; : NewsChannelObserver&lt;br/&gt;name = &amp;quot;Channel Two&amp;quot;" vertex="1">
+          <mxGeometry height="100" width="240" x="707" y="488" as="geometry" />
+        </mxCell>
+        <mxCell id="e-client-subj" edge="1" parent="1" source="client" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;strokeColor=#2563eb;fontColor=#2563eb;fontSize=10;fontFamily=JetBrains Mono,monospace;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="subj-iface" value="uses">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-newsobs-subjiface" edge="1" parent="1" source="news-obs" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=block;endFill=0;strokeColor=#16a34a;fontColor=#16a34a;fontSize=10;fontFamily=JetBrains Mono,monospace;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="subj-iface" value="implements">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-ch1-obsiface" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=block;endFill=0;strokeColor=#5b4fcf;fontColor=#5b4fcf;fontSize=10;fontFamily=JetBrains Mono,monospace;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" value="implements">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="825" y="294" as="sourcePoint" />
+            <mxPoint x="836" y="144" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-newsobs-obsiface" edge="1" parent="1" source="news-obs" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;startArrow=diamondThin;startFill=0;strokeColor=#d97706;fontColor=#d97706;fontSize=10;fontFamily=JetBrains Mono,monospace;html=1;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" target="obs-iface" value="holds list of">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="660" y="320" />
+              <mxPoint x="660" y="144" />
+              <mxPoint x="760" y="144" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-ch1-inst" edge="1" parent="1" source="ch1" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;strokeColor=#9b59b6;fontColor=#9b59b6;fontSize=10;fontFamily=JetBrains Mono,monospace;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="inst" value="instantiated as">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-bg" parent="1" style="rounded=1;fillColor=#f4f5f7;strokeColor=#c0c4cc;arcSize=8;html=1;" value="" vertex="1">
+          <mxGeometry height="130" width="220" x="40" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-title" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontStyle=1;fontColor=#1a1d27;fillColor=none;strokeColor=none;" value="Legend" vertex="1">
+          <mxGeometry height="16" width="200" x="54" y="388" as="geometry" />
+        </mxCell>
+        <mxCell id="l1" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#5b4fcf;fillColor=none;strokeColor=none;" value="─ ─ ▷   implements" vertex="1">
+          <mxGeometry height="16" width="200" x="54" y="408" as="geometry" />
+        </mxCell>
+        <mxCell id="l2" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#2563eb;fillColor=none;strokeColor=none;" value="─ ─ →   uses / dependency" vertex="1">
+          <mxGeometry height="16" width="200" x="54" y="428" as="geometry" />
+        </mxCell>
+        <mxCell id="l3" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#d97706;fillColor=none;strokeColor=none;" value="◇ ——→   holds list of (composition)" vertex="1">
+          <mxGeometry height="16" width="200" x="54" y="448" as="geometry" />
+        </mxCell>
+        <mxCell id="l4" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#9b59b6;fillColor=none;strokeColor=none;" value="─ ─ →   instantiated as (runtime)" vertex="1">
+          <mxGeometry height="16" width="200" x="54" y="468" as="geometry" />
+        </mxCell>
+        <mxCell id="l5" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#5a6070;fillColor=none;strokeColor=none;" value="Push model: data sent via update()" vertex="1">
+          <mxGeometry height="16" width="200" x="54" y="488" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-note" parent="1" style="rounded=1;whiteSpace=wrap;fillColor=#fff8e6;strokeColor=#d97706;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#1a1d27;arcSize=8;align=left;spacingLeft=10;html=1;verticalAlign=top;" value="&lt;b&gt;Runtime flow (setNews):&lt;/b&gt;&lt;br/&gt;1. Client calls setNews() on NewsObservableImpl&lt;br/&gt;2. setNews() stores news, calls notifyObservers()&lt;br/&gt;3. Loop: each Observer.update(news) is called&lt;br/&gt;4. remove(channel1) → unsubscribed&lt;br/&gt;5. Next setNews() only notifies channel2" vertex="1">
+          <mxGeometry height="100" width="330" x="40" y="530" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

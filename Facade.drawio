@@ -1,0 +1,111 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="saan0yks3JZoVGsxYyeX">
+    <mxGraphModel dx="1404" dy="563" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0" adaptiveColors="auto">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=15;fontStyle=1;fillColor=none;strokeColor=none;fontColor=#1a1d27;align=center;" value="Facade Pattern — Order Management System" vertex="1">
+          <mxGeometry height="30" width="860" x="160" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="client-label" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#2563eb;align=center;fillColor=none;strokeColor=none;" value="«Client»" vertex="1">
+          <mxGeometry height="16" width="200" x="49" y="59" as="geometry" />
+        </mxCell>
+        <mxCell id="client" parent="1" style="rounded=1;whiteSpace=wrap;arcSize=8;fillColor=#e8f4fd;strokeColor=#2563eb;fontColor=#1a1d27;fontFamily=JetBrains Mono,monospace;fontSize=11;align=left;spacingLeft=10;html=1;verticalAlign=top;" value="&lt;b&gt;FacadeOrderDemo&lt;/b&gt;&lt;hr/&gt;+ main(args: String[]): void" vertex="1">
+          <mxGeometry height="60" width="200" x="60" y="84" as="geometry" />
+        </mxCell>
+        <mxCell id="facade-label" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#5b4fcf;align=center;fillColor=none;strokeColor=none;" value="«Facade»" vertex="1">
+          <mxGeometry height="16" width="340" x="360" y="59" as="geometry" />
+        </mxCell>
+        <mxCell id="facade" parent="1" style="rounded=1;whiteSpace=wrap;arcSize=8;fillColor=#f3f0ff;strokeColor=#5b4fcf;fontColor=#1a1d27;fontFamily=JetBrains Mono,monospace;fontSize=11;align=left;spacingLeft=10;html=1;verticalAlign=top;" value="&lt;b&gt;OrderFacade&lt;/b&gt;&lt;hr/&gt;- inventory: InventoryService&lt;br/&gt;- payment: PaymentService&lt;br/&gt;- shipping: ShippingService&lt;br/&gt;- notification: NotificationService&lt;br/&gt;&lt;hr/&gt;+ OrderFacade()&lt;br/&gt;+ placeOrder(itemId, accountId, amount, address, email): void" vertex="1">
+          <mxGeometry height="140" width="340" x="360" y="84" as="geometry" />
+        </mxCell>
+        <mxCell id="subsys-label" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#d97706;align=center;fillColor=none;strokeColor=none;" value="«Subsystem Classes»" vertex="1">
+          <mxGeometry height="16" width="840" x="128" y="331" as="geometry" />
+        </mxCell>
+        <mxCell id="inv-label" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#d97706;align=center;fillColor=none;strokeColor=none;" value="«Subsystem»" vertex="1">
+          <mxGeometry height="16" width="220" x="24" y="357" as="geometry" />
+        </mxCell>
+        <mxCell id="inv" parent="1" style="rounded=1;whiteSpace=wrap;arcSize=8;fillColor=#fff8e6;strokeColor=#d97706;fontColor=#1a1d27;fontFamily=JetBrains Mono,monospace;fontSize=11;align=left;spacingLeft=10;html=1;verticalAlign=top;" value="&lt;b&gt;InventoryService&lt;/b&gt;&lt;hr/&gt;+ checkStock(itemId: String): boolean&lt;br/&gt;+ reserveItem(itemId: String): void" vertex="1">
+          <mxGeometry height="80" width="220" x="60" y="384" as="geometry" />
+        </mxCell>
+        <mxCell id="pay-label" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#d97706;align=center;fillColor=none;strokeColor=none;" value="«Subsystem»" vertex="1">
+          <mxGeometry height="16" width="220" x="267" y="357" as="geometry" />
+        </mxCell>
+        <mxCell id="pay" parent="1" style="rounded=1;whiteSpace=wrap;arcSize=8;fillColor=#fff8e6;strokeColor=#d97706;fontColor=#1a1d27;fontFamily=JetBrains Mono,monospace;fontSize=11;align=left;spacingLeft=10;html=1;verticalAlign=top;" value="&lt;b&gt;PaymentService&lt;/b&gt;&lt;hr/&gt;+ processPayment(accountId: String, amount: double): void" vertex="1">
+          <mxGeometry height="80" width="220" x="310" y="384" as="geometry" />
+        </mxCell>
+        <mxCell id="ship-label" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#d97706;align=center;fillColor=none;strokeColor=none;" value="«Subsystem»" vertex="1">
+          <mxGeometry height="16" width="220" x="523" y="364" as="geometry" />
+        </mxCell>
+        <mxCell id="ship" parent="1" style="rounded=1;whiteSpace=wrap;arcSize=8;fillColor=#fff8e6;strokeColor=#d97706;fontColor=#1a1d27;fontFamily=JetBrains Mono,monospace;fontSize=11;align=left;spacingLeft=10;html=1;verticalAlign=top;" value="&lt;b&gt;ShippingService&lt;/b&gt;&lt;hr/&gt;+ shipItem(itemId: String, address: String): void" vertex="1">
+          <mxGeometry height="80" width="220" x="560" y="384" as="geometry" />
+        </mxCell>
+        <mxCell id="notif-label" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#d97706;align=center;fillColor=none;strokeColor=none;" value="«Subsystem»" vertex="1">
+          <mxGeometry height="16" width="220" x="769" y="357" as="geometry" />
+        </mxCell>
+        <mxCell id="notif" parent="1" style="rounded=1;whiteSpace=wrap;arcSize=8;fillColor=#fff8e6;strokeColor=#d97706;fontColor=#1a1d27;fontFamily=JetBrains Mono,monospace;fontSize=11;align=left;spacingLeft=10;html=1;verticalAlign=top;" value="&lt;b&gt;NotificationService&lt;/b&gt;&lt;hr/&gt;+ sendConfirmation(userEmail: String): void" vertex="1">
+          <mxGeometry height="80" width="220" x="810" y="384" as="geometry" />
+        </mxCell>
+        <mxCell id="e-client-facade" edge="1" parent="1" source="client" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;strokeColor=#2563eb;fontColor=#2563eb;fontSize=10;fontFamily=JetBrains Mono,monospace;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="facade" value="uses">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-facade-inv" edge="1" parent="1" source="facade" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;startArrow=diamondThin;startFill=0;strokeColor=#5b4fcf;fontColor=#5b4fcf;fontSize=10;fontFamily=JetBrains Mono,monospace;html=1;exitX=0.15;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="inv" value="delegates">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="411" y="310" />
+              <mxPoint x="170" y="310" />
+              <mxPoint x="170" y="384" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-facade-pay" edge="1" parent="1" source="facade" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;startArrow=diamondThin;startFill=0;strokeColor=#5b4fcf;fontColor=#5b4fcf;fontSize=10;fontFamily=JetBrains Mono,monospace;html=1;exitX=0.38;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="pay" value="delegates">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="489" y="310" />
+              <mxPoint x="420" y="310" />
+              <mxPoint x="420" y="384" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-facade-ship" edge="1" parent="1" source="facade" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;startArrow=diamondThin;startFill=0;strokeColor=#5b4fcf;fontColor=#5b4fcf;fontSize=10;fontFamily=JetBrains Mono,monospace;html=1;exitX=0.62;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="ship" value="delegates">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="571" y="310" />
+              <mxPoint x="670" y="310" />
+              <mxPoint x="670" y="384" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-facade-notif" edge="1" parent="1" source="facade" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;startArrow=diamondThin;startFill=0;strokeColor=#5b4fcf;fontColor=#5b4fcf;fontSize=10;fontFamily=JetBrains Mono,monospace;html=1;exitX=0.85;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="notif" value="delegates">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="649" y="300" />
+              <mxPoint x="920" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend-bg" parent="1" style="rounded=1;fillColor=#f4f5f7;strokeColor=#c0c4cc;arcSize=8;html=1;" value="" vertex="1">
+          <mxGeometry height="110" width="310" x="60" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-title" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontStyle=1;fontColor=#1a1d27;fillColor=none;strokeColor=none;" value="Legend" vertex="1">
+          <mxGeometry height="16" width="280" x="74" y="518" as="geometry" />
+        </mxCell>
+        <mxCell id="l1" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#2563eb;fillColor=none;strokeColor=none;" value="─ ─ →   uses / dependency (Client → Facade)" vertex="1">
+          <mxGeometry height="16" width="290" x="74" y="538" as="geometry" />
+        </mxCell>
+        <mxCell id="l2" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#5b4fcf;fillColor=none;strokeColor=none;" value="◇ ——→   delegates / holds (Facade → Subsystem)" vertex="1">
+          <mxGeometry height="16" width="290" x="74" y="558" as="geometry" />
+        </mxCell>
+        <mxCell id="l3" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#5a6070;fillColor=none;strokeColor=none;" value="Client never touches subsystem classes directly" vertex="1">
+          <mxGeometry height="16" width="290" x="74" y="578" as="geometry" />
+        </mxCell>
+        <mxCell id="l4" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#5a6070;fillColor=none;strokeColor=none;" value="Facade owns subsystem lifecycle (creates them)" vertex="1">
+          <mxGeometry height="16" width="290" x="74" y="598" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-note" parent="1" style="rounded=1;whiteSpace=wrap;fillColor=#f3f0ff;strokeColor=#5b4fcf;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#1a1d27;arcSize=8;align=left;spacingLeft=10;html=1;verticalAlign=top;" value="&lt;b&gt;Runtime flow (placeOrder):&lt;/b&gt;&lt;br/&gt;1. Client calls placeOrder() on OrderFacade&lt;br/&gt;2. Facade → InventoryService.checkStock()&lt;br/&gt;3. Facade → InventoryService.reserveItem()&lt;br/&gt;4. Facade → PaymentService.processPayment()&lt;br/&gt;5. Facade → ShippingService.shipItem()&lt;br/&gt;6. Facade → NotificationService.sendConfirmation()" vertex="1">
+          <mxGeometry height="110" width="330" x="400" y="510" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,105 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="kHTTxDhKzHiGm7vwtBZc">
+    <mxGraphModel dx="1404" dy="563" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0" adaptiveColors="auto">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=15;fontStyle=1;fillColor=none;strokeColor=none;fontColor=#1a1d27;align=center;" value="Adapter Pattern — MediaPlayer Example" vertex="1">
+          <mxGeometry height="30" width="820" x="170" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="client-label" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#2563eb;align=center;fillColor=none;strokeColor=none;" value="«Client»" vertex="1">
+          <mxGeometry height="16" width="220" x="57" y="62" as="geometry" />
+        </mxCell>
+        <mxCell id="client" parent="1" style="rounded=1;whiteSpace=wrap;arcSize=8;fillColor=#e8f4fd;strokeColor=#2563eb;fontColor=#1a1d27;fontFamily=JetBrains Mono,monospace;fontSize=11;align=left;spacingLeft=10;html=1;verticalAlign=top;" value="&lt;b&gt;AdapterDemoClient&lt;/b&gt;&lt;hr/&gt;+ main(args: String[]): void" vertex="1">
+          <mxGeometry height="64" width="220" x="60" y="84" as="geometry" />
+        </mxCell>
+        <mxCell id="target-label" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#5b4fcf;align=center;fillColor=none;strokeColor=none;" value="«interface» Target" vertex="1">
+          <mxGeometry height="16" width="280" x="390" y="59" as="geometry" />
+        </mxCell>
+        <mxCell id="target" parent="1" style="rounded=1;whiteSpace=wrap;arcSize=8;fillColor=#f3f0ff;strokeColor=#5b4fcf;fontColor=#1a1d27;fontFamily=JetBrains Mono,monospace;fontSize=11;align=left;spacingLeft=10;html=1;verticalAlign=top;" value="&lt;b&gt;&lt;i&gt;MediaPlayer&lt;/i&gt;&lt;/b&gt;&lt;hr/&gt;+ play(audioType: String, fileName: String): void" vertex="1">
+          <mxGeometry height="64" width="280" x="390" y="84" as="geometry" />
+        </mxCell>
+        <mxCell id="adaptee-iface-label" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#d97706;align=center;fillColor=none;strokeColor=none;" value="«interface» Adaptee" vertex="1">
+          <mxGeometry height="16" width="280" x="840" y="62" as="geometry" />
+        </mxCell>
+        <mxCell id="adaptee-iface" parent="1" style="rounded=1;whiteSpace=wrap;arcSize=8;fillColor=#fff8e6;strokeColor=#d97706;fontColor=#1a1d27;fontFamily=JetBrains Mono,monospace;fontSize=11;align=left;spacingLeft=10;html=1;verticalAlign=top;" value="&lt;b&gt;&lt;i&gt;AdvancedMediaPlayer&lt;/i&gt;&lt;/b&gt;&lt;hr/&gt;+ playVlc(fileName: String): void&lt;br/&gt;+ playMp4(fileName: String): void" vertex="1">
+          <mxGeometry height="80" width="280" x="840" y="84" as="geometry" />
+        </mxCell>
+        <mxCell id="adapter-label" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#16a34a;align=center;fillColor=none;strokeColor=none;" value="«Adapter»" vertex="1">
+          <mxGeometry height="16" width="340" x="360" y="231" as="geometry" />
+        </mxCell>
+        <mxCell id="adapter" parent="1" style="rounded=1;whiteSpace=wrap;arcSize=8;fillColor=#edfaf1;strokeColor=#16a34a;fontColor=#1a1d27;fontFamily=JetBrains Mono,monospace;fontSize=11;align=left;spacingLeft=10;html=1;verticalAlign=top;" value="&lt;b&gt;MediaAdapter&lt;/b&gt;&lt;hr/&gt;- advancedMediaPlayer: AdvancedMediaPlayer&lt;br/&gt;+ MediaAdapter(adv: AdvancedMediaPlayer)&lt;br/&gt;+ play(audioType: String, fileName: String): void" vertex="1">
+          <mxGeometry height="90" width="340" x="390" y="254" as="geometry" />
+        </mxCell>
+        <mxCell id="vlc-label" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#d97706;align=center;fillColor=none;strokeColor=none;" value="«Concrete Adaptee»" vertex="1">
+          <mxGeometry height="16" width="240" x="670" y="438" as="geometry" />
+        </mxCell>
+        <mxCell id="vlc" parent="1" style="rounded=1;whiteSpace=wrap;arcSize=8;fillColor=#fff8e6;strokeColor=#d97706;fontColor=#1a1d27;fontFamily=JetBrains Mono,monospace;fontSize=11;align=left;spacingLeft=10;html=1;verticalAlign=top;" value="&lt;b&gt;VlcPlayer&lt;/b&gt;&lt;hr/&gt;+ playVlc(fileName: String): void&lt;br/&gt;+ playMp4(fileName: String): void" vertex="1">
+          <mxGeometry height="80" width="240" x="730" y="464" as="geometry" />
+        </mxCell>
+        <mxCell id="mp4-label" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#d97706;align=center;fillColor=none;strokeColor=none;" value="«Concrete Adaptee»" vertex="1">
+          <mxGeometry height="16" width="240" x="940" y="442" as="geometry" />
+        </mxCell>
+        <mxCell id="mp4" parent="1" style="rounded=1;whiteSpace=wrap;arcSize=8;fillColor=#fff8e6;strokeColor=#d97706;fontColor=#1a1d27;fontFamily=JetBrains Mono,monospace;fontSize=11;align=left;spacingLeft=10;html=1;verticalAlign=top;" value="&lt;b&gt;Mp4Player&lt;/b&gt;&lt;hr/&gt;+ playVlc(fileName: String): void&lt;br/&gt;+ playMp4(fileName: String): void" vertex="1">
+          <mxGeometry height="80" width="240" x="1000" y="464" as="geometry" />
+        </mxCell>
+        <mxCell id="e-client-target" edge="1" parent="1" source="client" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;strokeColor=#2563eb;fontColor=#2563eb;fontSize=10;fontFamily=JetBrains Mono,monospace;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="target" value="uses">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-adapter-target" edge="1" parent="1" source="adapter" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=block;endFill=0;strokeColor=#5b4fcf;fontColor=#5b4fcf;fontSize=10;fontFamily=JetBrains Mono,monospace;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="target" value="implements">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-adapter-adaptee" edge="1" parent="1" source="adapter" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;startArrow=diamondThin;startFill=0;strokeColor=#16a34a;fontColor=#16a34a;fontSize=10;fontFamily=JetBrains Mono,monospace;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="adaptee-iface" value="holds (composition)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="790" y="299" />
+              <mxPoint x="790" y="124" />
+              <mxPoint x="840" y="124" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-vlc-adaptee" edge="1" parent="1" source="vlc" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=block;endFill=0;strokeColor=#d97706;fontColor=#d97706;fontSize=10;fontFamily=JetBrains Mono,monospace;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" target="adaptee-iface" value="implements">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="850" y="420" />
+              <mxPoint x="850" y="380" />
+              <mxPoint x="910" y="380" />
+              <mxPoint x="910" y="164" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-mp4-adaptee" edge="1" parent="1" source="mp4" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=block;endFill=0;strokeColor=#d97706;fontColor=#d97706;fontSize=10;fontFamily=JetBrains Mono,monospace;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" target="adaptee-iface" value="implements">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1120" y="420" />
+              <mxPoint x="1120" y="380" />
+              <mxPoint x="1050" y="380" />
+              <mxPoint x="1050" y="164" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend-bg" parent="1" style="rounded=1;fillColor=#f4f5f7;strokeColor=#c0c4cc;arcSize=8;html=1;" value="" vertex="1">
+          <mxGeometry height="120" width="310" x="60" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-title" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontStyle=1;fontColor=#1a1d27;fillColor=none;strokeColor=none;" value="Legend" vertex="1">
+          <mxGeometry height="16" width="280" x="74" y="438" as="geometry" />
+        </mxCell>
+        <mxCell id="l1" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#5b4fcf;fillColor=none;strokeColor=none;" value="─ ─ ▷   implements (realization)" vertex="1">
+          <mxGeometry height="16" width="290" x="74" y="458" as="geometry" />
+        </mxCell>
+        <mxCell id="l2" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#2563eb;fillColor=none;strokeColor=none;" value="─ ─ →   uses / dependency" vertex="1">
+          <mxGeometry height="16" width="290" x="74" y="478" as="geometry" />
+        </mxCell>
+        <mxCell id="l3" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#16a34a;fillColor=none;strokeColor=none;" value="◇ ——→   holds (composition)" vertex="1">
+          <mxGeometry height="16" width="290" x="74" y="498" as="geometry" />
+        </mxCell>
+        <mxCell id="l4" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#5a6070;fillColor=none;strokeColor=none;" value="Object Adapter: wraps Adaptee via composition" vertex="1">
+          <mxGeometry height="16" width="290" x="74" y="518" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-note" parent="1" style="rounded=1;whiteSpace=wrap;fillColor=#f3f0ff;strokeColor=#5b4fcf;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#1a1d27;arcSize=8;align=left;spacingLeft=10;html=1;verticalAlign=top;" value="&lt;b&gt;Runtime flow:&lt;/b&gt;&lt;br/&gt;1. Client calls play() on MediaAdapter&lt;br/&gt;2. Adapter checks audioType&lt;br/&gt;3. Delegates to VlcPlayer.playVlc()&lt;br/&gt;   or Mp4Player.playMp4()" vertex="1">
+          <mxGeometry height="90" width="300" x="60" y="570" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

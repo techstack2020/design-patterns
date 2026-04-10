@@ -1,0 +1,249 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="HDvlsUdQBcVN3PhWIRuE">
+    <mxGraphModel dx="1872" dy="751" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1800" pageHeight="1100" math="0" shadow="0" adaptiveColors="auto">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=16;fontStyle=1;fillColor=none;strokeColor=none;fontColor=#1a1d27;align=center;" value="Abstract Factory Pattern — Cloud Infrastructure Provisioner" vertex="1">
+          <mxGeometry height="30" width="1300" x="200" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="row1-label" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=9;fontStyle=1;fontColor=#888;fillColor=none;strokeColor=none;align=left;" value="ROW 1 — CLIENT" vertex="1">
+          <mxGeometry height="16" width="160" x="20" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="row2-label" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=9;fontStyle=1;fontColor=#888;fillColor=none;strokeColor=none;align=left;" value="ROW 2 — ABSTRACT CONTRACTS" vertex="1">
+          <mxGeometry height="16" width="220" x="20" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="row3-label" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=9;fontStyle=1;fontColor=#888;fillColor=none;strokeColor=none;align=left;" value="ROW 3 — CONCRETE FACTORIES" vertex="1">
+          <mxGeometry height="16" width="220" x="20" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="row4-label" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=9;fontStyle=1;fontColor=#888;fillColor=none;strokeColor=none;align=left;" value="ROW 4 — CONCRETE PRODUCTS" vertex="1">
+          <mxGeometry height="16" width="220" x="20" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="client-label" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#2563eb;align=center;fillColor=none;strokeColor=none;" value="«Client»" vertex="1">
+          <mxGeometry height="16" width="240" x="200" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="client" parent="1" style="rounded=1;whiteSpace=wrap;arcSize=8;fillColor=#e8f4fd;strokeColor=#2563eb;fontColor=#1a1d27;fontFamily=JetBrains Mono,monospace;fontSize=11;align=left;spacingLeft=10;html=1;verticalAlign=top;" value="&lt;b&gt;AbstractFactoryApp&lt;/b&gt;&lt;hr/&gt;+ main(args: String[]): void" vertex="1">
+          <mxGeometry height="60" width="240" x="200" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="prov-label" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#2563eb;align=center;fillColor=none;strokeColor=none;" value="«Client»" vertex="1">
+          <mxGeometry height="16" width="280" x="560" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="prov" parent="1" style="rounded=1;whiteSpace=wrap;arcSize=8;fillColor=#e8f4fd;strokeColor=#2563eb;fontColor=#1a1d27;fontFamily=JetBrains Mono,monospace;fontSize=11;align=left;spacingLeft=10;html=1;verticalAlign=top;" value="&lt;b&gt;InfraProvisioner&lt;/b&gt;&lt;hr/&gt;- queue: MessageQueue&lt;br/&gt;- storage: BlobStorage&lt;br/&gt;&lt;hr/&gt;+ InfraProvisioner(factory: CloudInfraFactory)&lt;br/&gt;+ run(): void" vertex="1">
+          <mxGeometry height="110" width="280" x="560" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="factory-label" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#5b4fcf;align=center;fillColor=none;strokeColor=none;" value="«Abstract Factory»" vertex="1">
+          <mxGeometry height="16" width="300" x="260" y="278" as="geometry" />
+        </mxCell>
+        <mxCell id="factory" parent="1" style="rounded=1;whiteSpace=wrap;arcSize=8;fillColor=#f3f0ff;strokeColor=#5b4fcf;fontColor=#1a1d27;fontFamily=JetBrains Mono,monospace;fontSize=11;align=left;spacingLeft=10;html=1;verticalAlign=top;" value="&lt;b&gt;&lt;i&gt;CloudInfraFactory&lt;/i&gt;&lt;/b&gt;&lt;hr/&gt;+ createQueue(): MessageQueue&lt;br/&gt;+ createStorage(): BlobStorage" vertex="1">
+          <mxGeometry height="80" width="300" x="260" y="296" as="geometry" />
+        </mxCell>
+        <mxCell id="mq-label" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#16a34a;align=center;fillColor=none;strokeColor=none;" value="«Abstract Product A»" vertex="1">
+          <mxGeometry height="16" width="280" x="740" y="278" as="geometry" />
+        </mxCell>
+        <mxCell id="mq" parent="1" style="rounded=1;whiteSpace=wrap;arcSize=8;fillColor=#edfaf1;strokeColor=#16a34a;fontColor=#1a1d27;fontFamily=JetBrains Mono,monospace;fontSize=11;align=left;spacingLeft=10;html=1;verticalAlign=top;" value="&lt;b&gt;&lt;i&gt;MessageQueue&lt;/i&gt;&lt;/b&gt;&lt;hr/&gt;+ publish(message: String): void" vertex="1">
+          <mxGeometry height="70" width="280" x="740" y="296" as="geometry" />
+        </mxCell>
+        <mxCell id="bs-label" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#16a34a;align=center;fillColor=none;strokeColor=none;" value="«Abstract Product B»" vertex="1">
+          <mxGeometry height="16" width="280" x="1140" y="278" as="geometry" />
+        </mxCell>
+        <mxCell id="bs" parent="1" style="rounded=1;whiteSpace=wrap;arcSize=8;fillColor=#edfaf1;strokeColor=#16a34a;fontColor=#1a1d27;fontFamily=JetBrains Mono,monospace;fontSize=11;align=left;spacingLeft=10;html=1;verticalAlign=top;" value="&lt;b&gt;&lt;i&gt;BlobStorage&lt;/i&gt;&lt;/b&gt;&lt;hr/&gt;+ upload(file: String): void" vertex="1">
+          <mxGeometry height="70" width="280" x="1140" y="296" as="geometry" />
+        </mxCell>
+        <mxCell id="aws-factory-label" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#d97706;align=center;fillColor=none;strokeColor=none;" value="«Concrete Factory — AWS Family»" vertex="1">
+          <mxGeometry height="16" width="300" x="200" y="498" as="geometry" />
+        </mxCell>
+        <mxCell id="aws-factory" parent="1" style="rounded=1;whiteSpace=wrap;arcSize=8;fillColor=#fff8e6;strokeColor=#d97706;fontColor=#1a1d27;fontFamily=JetBrains Mono,monospace;fontSize=11;align=left;spacingLeft=10;html=1;verticalAlign=top;" value="&lt;b&gt;AwsFactory&lt;/b&gt;&lt;hr/&gt;+ createQueue(): MessageQueue&lt;br/&gt;  → returns new SqsQueue()&lt;br/&gt;+ createStorage(): BlobStorage&lt;br/&gt;  → returns new S3Storage()" vertex="1">
+          <mxGeometry height="100" width="300" x="200" y="516" as="geometry" />
+        </mxCell>
+        <mxCell id="azure-factory-label" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#e5503a;align=center;fillColor=none;strokeColor=none;" value="«Concrete Factory — Azure Family»" vertex="1">
+          <mxGeometry height="16" width="320" x="640" y="498" as="geometry" />
+        </mxCell>
+        <mxCell id="azure-factory" parent="1" style="rounded=1;whiteSpace=wrap;arcSize=8;fillColor=#fdecea;strokeColor=#e5503a;fontColor=#1a1d27;fontFamily=JetBrains Mono,monospace;fontSize=11;align=left;spacingLeft=10;html=1;verticalAlign=top;" value="&lt;b&gt;AzureFactory&lt;/b&gt;&lt;hr/&gt;+ createQueue(): MessageQueue&lt;br/&gt;  → returns new ServiceBusQueue()&lt;br/&gt;+ createStorage(): BlobStorage&lt;br/&gt;  → returns new BlobServiceStorage()" vertex="1">
+          <mxGeometry height="100" width="320" x="640" y="516" as="geometry" />
+        </mxCell>
+        <mxCell id="sqs-label" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#d97706;align=center;fillColor=none;strokeColor=none;" value="«Concrete Product A1 — AWS»" vertex="1">
+          <mxGeometry height="16" width="280" x="160" y="738" as="geometry" />
+        </mxCell>
+        <mxCell id="sqs" parent="1" style="rounded=1;whiteSpace=wrap;arcSize=8;fillColor=#fff8e6;strokeColor=#d97706;fontColor=#1a1d27;fontFamily=JetBrains Mono,monospace;fontSize=11;align=left;spacingLeft=10;html=1;verticalAlign=top;" value="&lt;b&gt;SqsQueue&lt;/b&gt;&lt;hr/&gt;+ publish(message: String): void&lt;br/&gt;  prints: &quot;SQS publish: ...&quot;" vertex="1">
+          <mxGeometry height="80" width="280" x="160" y="756" as="geometry" />
+        </mxCell>
+        <mxCell id="s3-label" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#d97706;align=center;fillColor=none;strokeColor=none;" value="«Concrete Product B1 — AWS»" vertex="1">
+          <mxGeometry height="16" width="280" x="500" y="738" as="geometry" />
+        </mxCell>
+        <mxCell id="s3" parent="1" style="rounded=1;whiteSpace=wrap;arcSize=8;fillColor=#fff8e6;strokeColor=#d97706;fontColor=#1a1d27;fontFamily=JetBrains Mono,monospace;fontSize=11;align=left;spacingLeft=10;html=1;verticalAlign=top;" value="&lt;b&gt;S3Storage&lt;/b&gt;&lt;hr/&gt;+ upload(file: String): void&lt;br/&gt;  prints: &quot;S3 upload: ...&quot;" vertex="1">
+          <mxGeometry height="80" width="280" x="500" y="756" as="geometry" />
+        </mxCell>
+        <mxCell id="sb-label" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#e5503a;align=center;fillColor=none;strokeColor=none;" value="«Concrete Product A2 — Azure»" vertex="1">
+          <mxGeometry height="16" width="280" x="860" y="738" as="geometry" />
+        </mxCell>
+        <mxCell id="sb" parent="1" style="rounded=1;whiteSpace=wrap;arcSize=8;fillColor=#fdecea;strokeColor=#e5503a;fontColor=#1a1d27;fontFamily=JetBrains Mono,monospace;fontSize=11;align=left;spacingLeft=10;html=1;verticalAlign=top;" value="&lt;b&gt;ServiceBusQueue&lt;/b&gt;&lt;hr/&gt;+ publish(message: String): void&lt;br/&gt;  prints: &quot;Azure Service Bus publish: ...&quot;" vertex="1">
+          <mxGeometry height="80" width="280" x="860" y="756" as="geometry" />
+        </mxCell>
+        <mxCell id="blob-label" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#e5503a;align=center;fillColor=none;strokeColor=none;" value="«Concrete Product B2 — Azure»" vertex="1">
+          <mxGeometry height="16" width="280" x="1210" y="738" as="geometry" />
+        </mxCell>
+        <mxCell id="blob" parent="1" style="rounded=1;whiteSpace=wrap;arcSize=8;fillColor=#fdecea;strokeColor=#e5503a;fontColor=#1a1d27;fontFamily=JetBrains Mono,monospace;fontSize=11;align=left;spacingLeft=10;html=1;verticalAlign=top;" value="&lt;b&gt;BlobServiceStorage&lt;/b&gt;&lt;hr/&gt;+ upload(file: String): void&lt;br/&gt;  prints: &quot;Azure Blob upload: ...&quot;" vertex="1">
+          <mxGeometry height="80" width="280" x="1210" y="756" as="geometry" />
+        </mxCell>
+        <mxCell id="e-main-prov" edge="1" parent="1" source="client" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;strokeColor=#2563eb;fontColor=#2563eb;fontSize=10;fontFamily=JetBrains Mono,monospace;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="prov" value="creates">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-prov-factory" edge="1" parent="1" source="prov" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;strokeColor=#5b4fcf;fontColor=#5b4fcf;fontSize=10;fontFamily=JetBrains Mono,monospace;html=1;exitX=0;exitY=0.7;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="factory" value="uses">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="490" y="196" />
+              <mxPoint x="410" y="196" />
+              <mxPoint x="410" y="296" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-prov-mq" edge="1" parent="1" source="prov" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;strokeColor=#16a34a;fontColor=#16a34a;fontSize=10;fontFamily=JetBrains Mono,monospace;html=1;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="mq" value="uses">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="700" y="151" />
+              <mxPoint x="720" y="151" />
+              <mxPoint x="720" y="331" />
+              <mxPoint x="740" y="331" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-prov-bs" edge="1" parent="1" source="prov" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;strokeColor=#16a34a;fontColor=#16a34a;fontSize=10;fontFamily=JetBrains Mono,monospace;html=1;exitX=1;exitY=0.6;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="bs" value="uses">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="900" y="184" />
+              <mxPoint x="1120" y="184" />
+              <mxPoint x="1120" y="331" />
+              <mxPoint x="1140" y="331" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-awsfact-factory" edge="1" parent="1" source="aws-factory" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=block;endFill=0;strokeColor=#d97706;fontColor=#d97706;fontSize=10;fontFamily=JetBrains Mono,monospace;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" target="factory" value="implements">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="350" y="450" />
+              <mxPoint x="350" y="376" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-azurefact-factory" edge="1" parent="1" source="azure-factory" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=block;endFill=0;strokeColor=#e5503a;fontColor=#e5503a;fontSize=10;fontFamily=JetBrains Mono,monospace;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" target="factory" value="implements">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="560" y="566" />
+              <mxPoint x="480" y="566" />
+              <mxPoint x="480" y="450" />
+              <mxPoint x="485" y="450" />
+              <mxPoint x="485" y="376" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-sqs-mq" edge="1" parent="1" source="sqs" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=block;endFill=0;strokeColor=#d97706;fontColor=#d97706;fontSize=10;fontFamily=JetBrains Mono,monospace;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.15;entryY=1;entryDx=0;entryDy=0;" target="mq" value="implements">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="300" y="700" />
+              <mxPoint x="300" y="680" />
+              <mxPoint x="782" y="680" />
+              <mxPoint x="782" y="366" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-s3-bs" edge="1" parent="1" source="s3" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=block;endFill=0;strokeColor=#d97706;fontColor=#d97706;fontSize=10;fontFamily=JetBrains Mono,monospace;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.15;entryY=1;entryDx=0;entryDy=0;" target="bs" value="implements">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="640" y="700" />
+              <mxPoint x="640" y="670" />
+              <mxPoint x="1182" y="670" />
+              <mxPoint x="1182" y="366" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-sb-mq" edge="1" parent="1" source="sb" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=block;endFill=0;strokeColor=#e5503a;fontColor=#e5503a;fontSize=10;fontFamily=JetBrains Mono,monospace;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.85;entryY=1;entryDx=0;entryDy=0;" target="mq" value="implements">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1000" y="700" />
+              <mxPoint x="1000" y="660" />
+              <mxPoint x="978" y="660" />
+              <mxPoint x="978" y="366" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-blob-bs" edge="1" parent="1" source="blob" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=block;endFill=0;strokeColor=#e5503a;fontColor=#e5503a;fontSize=10;fontFamily=JetBrains Mono,monospace;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.85;entryY=1;entryDx=0;entryDy=0;" target="bs" value="implements">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1350" y="700" />
+              <mxPoint x="1350" y="650" />
+              <mxPoint x="1378" y="650" />
+              <mxPoint x="1378" y="366" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-awsfact-sqs" edge="1" parent="1" source="aws-factory" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;strokeColor=#d97706;fontColor=#d97706;fontSize=10;fontFamily=JetBrains Mono,monospace;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="sqs" value="creates">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="275" y="650" />
+              <mxPoint x="275" y="720" />
+              <mxPoint x="300" y="720" />
+              <mxPoint x="300" y="756" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-awsfact-s3" edge="1" parent="1" source="aws-factory" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;strokeColor=#d97706;fontColor=#d97706;fontSize=10;fontFamily=JetBrains Mono,monospace;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="s3" value="creates">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="425" y="650" />
+              <mxPoint x="425" y="720" />
+              <mxPoint x="640" y="720" />
+              <mxPoint x="640" y="756" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-azurefact-sb" edge="1" parent="1" source="azure-factory" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;strokeColor=#e5503a;fontColor=#e5503a;fontSize=10;fontFamily=JetBrains Mono,monospace;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="sb" value="creates">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="720" y="650" />
+              <mxPoint x="720" y="720" />
+              <mxPoint x="1000" y="720" />
+              <mxPoint x="1000" y="756" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e-azurefact-blob" edge="1" parent="1" source="azure-factory" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;strokeColor=#e5503a;fontColor=#e5503a;fontSize=10;fontFamily=JetBrains Mono,monospace;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="blob" value="creates">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="880" y="650" />
+              <mxPoint x="880" y="730" />
+              <mxPoint x="1350" y="730" />
+              <mxPoint x="1350" y="756" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend-bg" parent="1" style="rounded=1;fillColor=#f4f5f7;strokeColor=#c0c4cc;arcSize=8;html=1;" value="" vertex="1">
+          <mxGeometry height="160" width="420" x="160" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-title" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontStyle=1;fontColor=#1a1d27;fillColor=none;strokeColor=none;" value="Legend" vertex="1">
+          <mxGeometry height="16" width="380" x="176" y="910" as="geometry" />
+        </mxCell>
+        <mxCell id="l1" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#5b4fcf;fillColor=none;strokeColor=none;" value="─ ─ ▷   implements interface (realization)" vertex="1">
+          <mxGeometry height="16" width="380" x="176" y="930" as="geometry" />
+        </mxCell>
+        <mxCell id="l2" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#2563eb;fillColor=none;strokeColor=none;" value="─ ─ →   uses / depends on" vertex="1">
+          <mxGeometry height="16" width="380" x="176" y="950" as="geometry" />
+        </mxCell>
+        <mxCell id="l3" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#d97706;fillColor=none;strokeColor=none;" value="——→   creates concrete product — AWS family" vertex="1">
+          <mxGeometry height="16" width="380" x="176" y="970" as="geometry" />
+        </mxCell>
+        <mxCell id="l4" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#e5503a;fillColor=none;strokeColor=none;" value="——→   creates concrete product — Azure family" vertex="1">
+          <mxGeometry height="16" width="380" x="176" y="990" as="geometry" />
+        </mxCell>
+        <mxCell id="l5" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#5a6070;fillColor=none;strokeColor=none;" value="InfraProvisioner has zero arrows to Row 4 classes" vertex="1">
+          <mxGeometry height="16" width="380" x="176" y="1010" as="geometry" />
+        </mxCell>
+        <mxCell id="l6" parent="1" style="text;html=1;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#5a6070;fillColor=none;strokeColor=none;" value="Swap AwsFactory → AzureFactory = zero client change" vertex="1">
+          <mxGeometry height="16" width="380" x="176" y="1030" as="geometry" />
+        </mxCell>
+        <mxCell id="flow-note" parent="1" style="rounded=1;whiteSpace=wrap;fillColor=#f3f0ff;strokeColor=#5b4fcf;fontFamily=JetBrains Mono,monospace;fontSize=10;fontColor=#1a1d27;arcSize=8;align=left;spacingLeft=10;html=1;verticalAlign=top;" value="&lt;b&gt;Family constraint — products must never cross:&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;AwsFactory   → SqsQueue         + S3Storage&lt;br/&gt;AzureFactory → ServiceBusQueue  + BlobServiceStorage&lt;br/&gt;&lt;br/&gt;InfraProvisioner only knows these 3 types:&lt;br/&gt;  CloudInfraFactory  |  MessageQueue  |  BlobStorage&lt;br/&gt;&lt;br/&gt;Never references: SqsQueue, S3Storage,&lt;br/&gt;ServiceBusQueue, BlobServiceStorage" vertex="1">
+          <mxGeometry height="160" width="440" x="660" y="900" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

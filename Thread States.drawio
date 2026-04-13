@@ -1,0 +1,109 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="1fjoMpH87g69GvrXv0Q6">
+    <mxGraphModel dx="1560" dy="626" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="new" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontSize=13;arcSize=15;verticalAlign=middle;" value="&lt;b&gt;NEW&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:11px&#39;&gt;Thread created, not started&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="200" x="627" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="runnable" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#1a3a1a;fontSize=13;arcSize=15;" value="&lt;b&gt;RUNNABLE&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:11px&#39;&gt;Ready / actively running on CPU&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="300" x="577" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="blocked" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#3a2a00;fontSize=13;arcSize=15;" value="&lt;b&gt;BLOCKED&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:11px&#39;&gt;Waiting for monitor lock&lt;/font&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px;color:#7a5000&#39;&gt;synchronized block contention&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="240" x="158" y="464" as="geometry" />
+        </mxCell>
+        <mxCell id="waiting" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#3a0060;fontSize=13;arcSize=15;" value="&lt;b&gt;WAITING&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:11px&#39;&gt;Indefinite wait for signal&lt;/font&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px;color:#4a0072&#39;&gt;wait() / join() / park()&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="300" x="577" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="timed" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontColor=#5a0000;fontSize=13;arcSize=15;" value="&lt;b&gt;TIMED_WAITING&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:11px&#39;&gt;Waiting with timeout&lt;/font&gt;&lt;br&gt;&lt;font style=&#39;font-size:10px;color:#7a2a00&#39;&gt;sleep(n) / wait(n) / join(n)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="280" x="1050" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="terminated" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontSize=13;arcSize=15;" value="&lt;b&gt;TERMINATED&lt;/b&gt;&lt;br&gt;&lt;font style=&#39;font-size:11px&#39;&gt;Execution complete / exception&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="200" x="627" y="789" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="new" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=2;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="runnable" value="t.start()">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=2;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" value="contends for synchronized lock">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="478" y="304" />
+              <mxPoint x="278" y="304" />
+              <mxPoint x="278" y="479" />
+            </Array>
+            <mxPoint x="575" y="304" as="sourcePoint" />
+            <mxPoint x="278" y="464" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=2;labelBackgroundColor=#ffffff;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="runnable" value="lock acquired">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="193" y="230" />
+              <mxPoint x="577" y="230" />
+            </Array>
+            <mxPoint x="193" y="462" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="runnable" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=2;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="waiting" value="&lt;br&gt;&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; wait() / join() / park()">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="waiting" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=2;labelBackgroundColor=#ffffff;exitX=0.3;exitY=0;exitDx=0;exitDy=0;" value="notify() / notifyAll() / unpark()">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="637" y="470" />
+              <mxPoint x="637" y="330" />
+            </Array>
+            <mxPoint x="637" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="runnable" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=2;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="timed" value="sleep(n) / wait(n) / join(n) / parkNanos()">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="980" y="295" />
+              <mxPoint x="1190" y="295" />
+              <mxPoint x="1190" y="470" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="timed" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=2;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="runnable" value="timeout elapsed / notify()">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1257" y="470" />
+              <mxPoint x="1257" y="420" />
+              <mxPoint x="1330" y="420" />
+              <mxPoint x="1330" y="230" />
+              <mxPoint x="877" y="230" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="runnable" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=11;fontStyle=2;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="terminated" value="run() completes / exception">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="727" y="465" />
+              <mxPoint x="727" y="465" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sep" parent="1" style="line;strokeColor=#cccccc;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="10" width="1340" x="80" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="h2" parent="1" style="text;html=1;align=center;fontSize=14;fontStyle=1;" value="&lt;b&gt;Key interview differentiators&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="480" x="490" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="k1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;align=left;" value="&lt;b&gt;BLOCKED vs WAITING&lt;/b&gt;&lt;br&gt;BLOCKED = wants lock (synchronized)&lt;br&gt;WAITING = wants signal (notify)&lt;br&gt;TIMED = signal or timeout" vertex="1">
+          <mxGeometry height="80" width="280" x="100" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="k2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;align=left;" value="&lt;b&gt;RUNNABLE ≠ RUNNING&lt;/b&gt;&lt;br&gt;Eligible to run — may not have CPU at this instant.&lt;br&gt;OS scheduler decides." vertex="1">
+          <mxGeometry height="80" width="280" x="420" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="k3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;align=left;" value="&lt;b&gt;wait() vs sleep()&lt;/b&gt;&lt;br&gt;wait() → releases monitor lock&lt;br&gt;sleep() → holds monitor lock&lt;br&gt;Classic interview trap!" vertex="1">
+          <mxGeometry height="80" width="280" x="740" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="k4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;align=left;" value="&lt;b&gt;Architect tip&lt;/b&gt;&lt;br&gt;Long BLOCKED = deadlock risk&lt;br&gt;Use ReentrantLock(true) for fairness&lt;br&gt;Diagnose: jstack / VisualVM / JFR" vertex="1">
+          <mxGeometry height="80" width="280" x="1060" y="680" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
